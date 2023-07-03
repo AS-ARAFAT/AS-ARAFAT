@@ -379,16 +379,7 @@ def follow(ses,coki):
 	ses.get(('https://mbasic.facebook.com' + str(get)), cookies={'cookie': coki}).text
 
 logo = ("""\033[1;32m 
-\033[1;32m                    A
-\033[1;33m                    R
-\033[1;32m                    A
-\033[1;33m                     F
-\033[1;32m                     A
-\033[1;33m                     T
-                                              
-
-
-
+\033[1;32m                    AR AF AT
 \033[;33mCLEAR FECBOOK DATA TO OEPN CP ID JUST NOW😽
 
         

